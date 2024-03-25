@@ -1,0 +1,43 @@
+
+1-ALUNOS 
+
+CREATE TABLE alunos (
+  id_aluno INT AUTO_INCREMENT PRIMARY KEY,
+  ra INT UNIQUE,
+  nome VARCHAR(255),
+  data_nascimento DATE,
+  cidade VARCHAR(255),
+  email VARCHAR(255)
+);
+
+INSERT INTO alunos (ra, nome, data_nascimento, cidade, email)
+VALUES (12345, 'Matheus', '1988-01-01', 'São Paulo', 'matheus@gmail.com'),
+       (67890, 'Enzo', '1991-02-02', 'Rio de Janeiro', 'enzo@gmail.com'),
+       (11234, 'Luis', '1992-03-03', 'Brasília', 'luis@gmail.com'),
+       (22345, 'Felipe', '1995-04-04', 'Salvador', 'felipe@gmail.com');
+
+SELECT * FROM alunos;
+
+
+
+
+
+
+
+2- FUNCIONÁRIOS
+CREATE TABLE colaboradores (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  codigo INT UNIQUE,
+  nome VARCHAR(255),
+  cpf VARCHAR(11),
+  cargo VARCHAR(255),
+  salario DECIMAL(10,2)
+);
+
+INSERT INTO colaboradores (codigo, nome, cpf, cargo, salario)
+VALUES (12345, 'Luis', '12345678901', 'Gerente', 5000.00),
+       (67890, 'Matheus', '23456789012', 'Desenvolvedor', 3000.00),
+       (11234, 'Felipe', '34567890123', 'Analista', 4000.00),
+       (22345, 'Enzo', '45678901234', 'Estagiário', 1000.00);
+
+SELECT * FROM colaboradores;
